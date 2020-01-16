@@ -7,14 +7,14 @@ pipeline {
         stage('Build') {
             steps {
                     echo "Building...."
-                    sh 'docker build -t tester .'
+                    sh 'sudo docker build -t tester .'
             }
         }
 
         stage('Test') {
             steps {
             echo "checking if docker is in the images..."
-                    sh 'docker images'
+                    sh 'sudo docker images'
             }
         }
 
